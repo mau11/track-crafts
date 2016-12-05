@@ -1,0 +1,22 @@
+{
+  "name": "track-crafts",
+  "version": "1.0.0",
+  "description": "A web application that keeps track of a knitter/crocheter's yarn supply, hooks/needles and patterns.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mau11/track-crafts.git"
+  },
+  "author": "mau",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mau11/track-crafts/issues"
+  },
+  "homepage": "https://github.com/mau11/track-crafts#readme",
+  "dependencies": {
+    "live-server": "^1.1.0"
+  }
+}
