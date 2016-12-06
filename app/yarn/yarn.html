@@ -20,8 +20,10 @@
       <button ng-click="clear()" ng-submit='values'>RESET</button>
       <br>
       <br>
-      <div ng-click=""> Skeins: {{ total }}</div>
-      <div>{{ yarnDisplay }}</div>
+      <h4>Yarn Skeins:</h4><hr>
+      <div ng-repeat="skein in allYarn">
+        <div ng-repeat="(key, val) in skein">{{ key }} : {{ val }}</div><hr>
+      </div>
     </form>
   </div>
 </div>

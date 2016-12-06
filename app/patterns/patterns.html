@@ -1,6 +1,7 @@
 <div id='container'>
   <br>
-  <div><h3>Track Patterns</h3>
+  <div>
+    <h3>Track Patterns</h3>
     <form name='patternsForm'>
       Pattern Name:
       <br>
@@ -10,7 +11,7 @@
       <input type="text" name="patt-source" ng-model="source" placeholder="(optional)">
       <br> Pattern/Notes:
       <br>
-      <textarea name="patt-notes" ng-model="notes" placeholder="(optional)" cols="30" rows="8"></textarea>
+      <textarea ng-model="notes" placeholder="(optional)" cols="30" rows="8"></textarea>
       <br> Craft:
       <select ng-model="craft" ng-options="x for x in listOfCrafts ">
       </select>
@@ -20,9 +21,12 @@
       <br>
       <br>
       <button ng-click="clear()" ng-submit='values'>RESET</button>
-      <br><br>
-      <div ng-click=""> Patterns: {{ total }}</div>
-      <div>{{ pattDisplay }}</div>
+      <br>
+      <br>
+      <h4>Patterns:</h4><hr>
+      <div ng-repeat="pattern in allPatterns">
+        <div ng-repeat="(key, val) in pattern">{{ key }} : {{ val }}</div><hr>
+      </div>
     </form>
   </div>
 </div>

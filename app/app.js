@@ -22,3 +22,24 @@ angular.module('track-crafts', [
         redirectTo: '/'
       });
   });
+/*  .factory('allPatterns', [function(){
+    var y = {
+      allPatterns = [];
+    };
+    return y
+  }])*/
+
+
+
+/*
+var each = function(collection, callback) {
+  if(Array.isArray(collection)){
+    for(var i = 0; i < collection.length; i++){
+      callback(collection[i]);
+    }
+  } else {
+    for(var key in collection){
+      callback(collection[key]);
+    }
+  }
+};*/
