@@ -1,1 +1,31 @@
-
+<div id='container'>
+  <br>
+  <div>
+    <h3>Track Tools</h3>
+    <form name='toolsForm'>
+      Craft:
+      <select ng-model="craft" ng-options="craft for craft in listOfCrafts ">
+      </select>
+      <br> Tool:
+      <span ng-model="tool" ng-if="craft == 'KNIT'"> Needle </span>
+      <span ng-model="tool" ng-if="craft == 'CROCHET'"> Hook </span>
+      <br> Size:
+      <select ng-if="craft == 'KNIT'" ng-model="size" ng-options="x for x in listOfSizesK"></select>
+      <select ng-model="size" ng-if="craft == 'CROCHET'" ng-options="x for x in listOfSizesC ">
+      </select>
+      <br> Notes:
+      <br>
+      <textarea ng-model="notes" placeholder="(optional)"></textarea>
+      <br>
+      <br>
+      <button ng-click="save()" ng-submit='values'>Submit</button>
+      <br>
+      <br>
+      <button ng-click="clear()" ng-submit='values'>RESET</button>
+      <br>
+      <br>
+      <div ng-click=""> Hooks and Needles: {{ total }}</div>
+      <div>{{ toolDisplay }}</div>
+    </form>
+  </div>
+</div>

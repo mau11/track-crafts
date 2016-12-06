@@ -1,1 +1,27 @@
-
+<div id='container'>
+  <br>
+  <div>
+    <h3>Track Yarn</h3>
+    <form name='yarnForm'>
+      Brand:
+      <select ng-model="brand" ng-options="x for x in listOfBrands"></select>
+      <br> Weight:
+      <select ng-model="weight" ng-options="x for x in listOfWeights"></select>
+      <br> Color Group:
+      <select ng-model="color" ng-options="x for x in listOfColors"></select>
+      <br> Notes:
+      <br>
+      <textarea ng-model="notes" placeholder="(optional)"></textarea>
+      <br>
+      <br>
+      <button ng-click="save()" ng-submit='values'>Submit</button>
+      <br>
+      <br>
+      <button ng-click="clear()" ng-submit='values'>RESET</button>
+      <br>
+      <br>
+      <div ng-click=""> Skeins: {{ total }}</div>
+      <div>{{ yarnDisplay }}</div>
+    </form>
+  </div>
+</div>
