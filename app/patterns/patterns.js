@@ -1,4 +1,8 @@
 angular.module('track-crafts.patterns',[])
   .controller('PatternsController', function($scope){
-    $scope.test= 'HELLO';
+    $scope.list= [{
+
+    }];
+    $scope.listOfCrafts = ['KNIT', 'CROCHET', 'COMBO'];
+
   });

@@ -1,17 +1,17 @@
-<div id='container'>
-  <div>Fill out below to add new pattern:
+<div id='container'><br>
+  <div>
+  <div>Add new patterns:<div>
     <form name='patternsForm' ng-submit="addLink()">
-      <input type="text" name="patterns.name" ng-model="name" placeholder="Pattern Name" required ng-class="" /></br>
-      <input type="url" name="patterns.source" ngmodel="source" placeholder="Website"><br>
-      <dropdown placeholder="Colour..." list="colours" selected="colour" property="name"></dropdown>
-      <button onclick="">Submit</button>
+      <input type="text" name="patterns.name" ng-model="name" placeholder="Pattern Name" required ng-class="" />
+      </br>
+      <input type="url" name="patterns.source" ngmodel="source" placeholder="Website">
+      <br>
+      <input type="text" name="patterns.notes" ngmodel="notes" placeholder="Enter notes or pattern here">
+      <br>
+      <select ng-model="listOfCrafts" ng-options="x for x in listOfCrafts">
+      </select>
+      <button onclick="">Submit</button><br>
+      <div ng-click="toggle()">View All Patterns</div>
     </form>
-    <div ng-if='shortlyForm.link.$error.required && shortlyForm.$dirty' class="message">
-      <h2>Url required</h2>
-    </div>
-    <div ng-show='' class="message">
-      <h2>Not a valid url</h2>
-    </div>
   </div>
-  <!-- END SOLUTION -->
 </div>
