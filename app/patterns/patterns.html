@@ -1,17 +1,22 @@
-<div id='container'><br>
-  <div>
-  <div>Add new patterns:<div>
+<div id='container'>
+  <br>
+  <div>Add new patterns:
     <form name='patternsForm' ng-submit="addLink()">
-      <input type="text" name="patterns.name" ng-model="name" placeholder="Pattern Name" required ng-class="" />
+      <input type="text" name="patt-name" ng-model="name" placeholder="Pattern Name">
       </br>
-      <input type="url" name="patterns.source" ngmodel="source" placeholder="Website">
+      <input type="text" name="patt-source" ng-model="source" placeholder="Website">
       <br>
-      <input type="text" name="patterns.notes" ngmodel="notes" placeholder="Enter notes or pattern here">
+      <textarea name="patt-notes" ng-model="notes" placeholder="Enter notes or pattern" cols="30" rows="8"></textarea>
       <br>
-      <select ng-model="listOfCrafts" ng-options="x for x in listOfCrafts">
+      <select ng-model="craft " ng-options="x for x in listOfCrafts ">
       </select>
-      <button onclick="">Submit</button><br>
-      <div ng-click="toggle()">View All Patterns</div>
+      <br><br>
+      <button ng-click="save()" ng-submit='values'>Submit</button>
+      <br>
+      <div>New Pattern Added: {{ values }}</div>
+      <br>
+      <div ng-click=" ">View All Patterns</div>
+      <div ng-repeat="pattern in allPatterns">test{{ allPatterns }}</div>
     </form>
   </div>
 </div>
