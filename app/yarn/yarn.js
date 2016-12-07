@@ -1,16 +1,16 @@
-angular.module('track-crafts.yarn',[])
+angular.module('trackCrafts.yarn',[])
   .controller('YarnController', function($scope){
     $scope.allYarn = [];
     $scope.listOfBrands = ['Bernat', 'Caron', "Lily Sugar 'n Cream", 'Lion Brand', 'Red Heart', 'Other'];
-    $scope.listOfWeights = ['Lace', 'Super Fine/Baby', 'Fine/Sport', 'Light-Worsted', 'Medium/Worsted', 'Bulky/Chunky', 'Super Bulky', 'Jumbo'];
-    $scope.listOfColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Black', 'Grey', 'White'];
+    $scope.listOfWeights = ['Lace', 'Super Fine/Baby', 'Fine/Sport', 'Light-Worsted', 'Medium/Worsted', 'Bulky/Chunky', 'Super Bulky', 'Jumbo', 'Other'];
+    $scope.listOfColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Black', 'Grey', 'White', 'Other'];
     $scope.arr = [];
     $scope.clear = function(){
       $scope.brand = undefined;
       $scope.weight = undefined;
       $scope.colors = undefined;
       $scope.notes = undefined;
-    }
+    };
     $scope.save = function() {
       var yarn = {};
       if($scope.brand !== undefined || $scope.color !== undefined || $scope.notes !== undefined){
@@ -26,9 +26,5 @@ angular.module('track-crafts.yarn',[])
           return x;
         });
       }
-      console.log('CLICK!');
-    };
-    $scope.toggle = function(){
-      return $scope.allYarn;
     };
   });

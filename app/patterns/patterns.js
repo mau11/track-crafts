@@ -1,4 +1,4 @@
-angular.module('track-crafts.patterns',['track-crafts'])
+angular.module('trackCrafts.patterns',['trackCrafts'])
   .controller('PatternsController', function($scope){
     $scope.allPatterns = [];
     $scope.listOfCrafts = ['KNIT', 'CROCHET', 'BOTH'];
@@ -24,6 +24,5 @@ angular.module('track-crafts.patterns',['track-crafts'])
           return x;
         });
       }
-      console.log('CLICK!');
     };
   });

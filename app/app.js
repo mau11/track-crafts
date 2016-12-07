@@ -1,9 +1,18 @@
-angular.module('track-crafts', [
-  'track-crafts.patterns',
-  'track-crafts.tools',
-  'track-crafts.yarn',
+var trackCrafts = angular.module('trackCrafts', [
+  'trackCrafts.patterns',
+  'trackCrafts.tools',
+  'trackCrafts.yarn',
   'ngRoute'
-])
+])/*.controller('mainTrackController', function($scope, $http){
+  $scope.allData = {};
+  $http.get('/patterns')
+  .success(function(data) {
+    $scope.patterns = data;
+    console.log(data);
+  })
+  .error(function(data) {
+    console.log('ERROR --->' + data);
+  })*/
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider
       .when('/patterns', {
@@ -19,18 +28,10 @@ angular.module('track-crafts', [
         controller: 'YarnController',
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/patterns'
       });
   });
-/*  .factory('allPatterns', [function(){
-    var y = {
-      allPatterns = [];
-    };
-    return y
-  }])*/
-
-
-
+//});
 /*
 var each = function(collection, callback) {
   if(Array.isArray(collection)){

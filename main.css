@@ -14,3 +14,7 @@ table, th {
   display: block;
   text-align: center;
 }
+body {
+  background-image: url('/back.JPG');
+  background-repeat: repeat-y;
+}

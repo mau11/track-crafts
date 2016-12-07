@@ -1,4 +1,4 @@
-angular.module('track-crafts.tools',[])
+angular.module('trackCrafts.tools',[])
   .controller('ToolsController', function($scope){
     $scope.allTools = [];
     $scope.listOfCrafts = ['(select one)', 'KNIT', 'CROCHET'];
@@ -7,11 +7,16 @@ angular.module('track-crafts.tools',[])
     $scope.clear = function(){
       $scope.craft = undefined;
       $scope.notes = undefined;
-    }
+    };
     $scope.save = function() {
       var toolbox = {};
       if($scope.craft !== undefined){//required field
         toolbox.craft = $scope.craft;
+        if($scope.craft === 'KNIT'){
+          $scope.tool = 'Needle';
+        } else if($scope.craft === 'CROCHET'){
+          $scope.tool = 'Hook';
+        }
         toolbox.tool = $scope.tool;
         toolbox.notes = $scope.notes;
         $scope.allTools.push(toolbox);
@@ -22,6 +27,5 @@ angular.module('track-crafts.tools',[])
           return x;
         });
       }
-      console.log('CLICK!');
     };
   });

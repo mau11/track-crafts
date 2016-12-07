@@ -24,9 +24,11 @@
       <button ng-click="clear()" ng-submit='values'>RESET</button>
       <br>
       <br>
-      <h4>Hooks and Needles:</h4><hr>
+      <h4>Hooks and Needles:</h4>
+      <hr>
       <div ng-repeat="item in allTools">
-        <div ng-repeat="(key, val) in item">{{ key }} : {{ val }}</div><hr>
+        <div ng-repeat="(key, val) in item">{{ key }} : {{ val }}</div>
+        <hr>
       </div>
     </form>
   </div>
